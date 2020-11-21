@@ -3,7 +3,7 @@ import Foundation
 
 // Press (command-/+) for scaling editor font size
 
-public var twoDimensionArraySize: Float = 37
+public var twoDimensionArraySize: Float = 100
 public var countOfLoops: Float = 9
 
 func generate2DArray(with size: Float) -> [[String]] {
@@ -16,7 +16,7 @@ func generateSpiralCoordinates(with countOfLoops: Float) -> [(Int, Int)] {
   
   let twopi: Float = 6.2
   let angleStep: Float = 0.1
-  let aStep: Float = 0.7 // is minimal aStep value for this solution
+  let aStep: Float = 0.5 // is minimal aStep value for this solution
   var angle: Float = 0.0
   var a: Float = 0
   var r: Float = 0
