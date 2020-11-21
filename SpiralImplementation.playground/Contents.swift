@@ -4,7 +4,7 @@ import Foundation
 // Press (command-/+) for scaling editor font size
 
 public var twoDimensionArraySize: Float = 37
-public var countOfLoops: Float = 6
+public var countOfLoops: Float = 9
 
 func generate2DArray(with size: Float) -> [[String]] {
   let numbers = [[String]](repeating: [String](repeating: " ", count: Int(size)), count: Int(size))
@@ -39,7 +39,7 @@ func generateSpiralCoordinates(with countOfLoops: Float) -> [(Int, Int)] {
 
 func insertStarsTo2DArray(with generatedSpiralCoordinates: [(Int, Int)]) {
   for coordinate in generatedSpiralCoordinates {
-    if coordinate.0 > Int(twoDimensionArraySize) || coordinate.1 > Int(twoDimensionArraySize) || coordinate.0 <= 0 || coordinate.1 <= 0 {
+    if coordinate.0 > Int(twoDimensionArraySize) || coordinate.1 > Int(twoDimensionArraySize) || coordinate.0 < 0 || coordinate.1 < 0 {
       print("Please, increase 2DArraySize or decrease countOfLoops")
       break
     } else {
