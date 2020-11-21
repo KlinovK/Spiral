@@ -16,7 +16,7 @@ func generateSpiralCoordinates(with countOfLoops: Float) -> [(Int, Int)] {
   
   let twopi: Float = 6.2
   let angleStep: Float = 0.1
-  let aStep: Float = 0.5 // is minimal aStep value for this solution
+  let aStep: Float = 0.7 // is minimal aStep value for this solution
   var angle: Float = 0.0
   var a: Float = 0
   var r: Float = 0
@@ -39,7 +39,7 @@ func generateSpiralCoordinates(with countOfLoops: Float) -> [(Int, Int)] {
 
 func insertStarsTo2DArray(with generatedSpiralCoordinates: [(Int, Int)]) {
   for coordinate in generatedSpiralCoordinates {
-    if coordinate.0 >= Int(twoDimensionArraySize) || coordinate.1 >= Int(twoDimensionArraySize) {
+    if coordinate.0 > Int(twoDimensionArraySize) || coordinate.1 > Int(twoDimensionArraySize) || coordinate.0 <= 0 || coordinate.1 <= 0 {
       print("Please, increase 2DArraySize or decrease countOfLoops")
       break
     } else {
