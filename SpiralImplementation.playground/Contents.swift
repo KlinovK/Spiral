@@ -50,7 +50,8 @@ func insertStarsTo2DArray(with generatedSpiralCoordinates: [(Int, Int)]) {
 
 func printSpiral(in twoDimensionArray: [[String]]) {
   for row in twoDimensionArray {
-    print(row)
+    print(row.joined())
+   // print(row) // to print original 2D array
   }
 }
 
